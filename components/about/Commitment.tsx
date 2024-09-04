@@ -31,21 +31,28 @@ const useWindowSize = () => {
 
 function Commitment() {
   const { width: screenWidth } = useWindowSize();
+  const [backgroundClass, setBackgroundClass] = useState("");
 
-  const returnBackgroundImg = () => {
-    console.log(screenWidth);
-
+  useEffect(() => {
     if (screenWidth >= 1024)
-      return `bg-[url('/assets/about/desktop/image-commitment.jpg')] bg-cover bg-center bg-no-repeat h-[400px] md:h-full rounded-lg`;
+      return setBackgroundClass(
+        `bg-[url('/assets/about/desktop/image-commitment.jpg')]`
+      );
     if (screenWidth >= 768)
-      return `bg-[url('/assets/about/tablet/image-commitment.jpg')] bg-cover bg-center bg-no-repeat h-[400px] md:h-full rounded-lg`;
+      return setBackgroundClass(
+        `bg-[url('/assets/about/tablet/image-commitment.jpg')]`
+      );
 
-    return `bg-[url('/assets/about/mobile/image-commitment.jpg')] bg-cover bg-center bg-no-repeat h-[400px] md:h-full rounded-lg`;
-  };
+    return setBackgroundClass(
+      `bg-[url('/assets/about/mobile/image-commitment.jpg')]`
+    );
+  }, [screenWidth]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center justify-center gap-10 lg:gap-24 lg:px-20">
-      <div className={returnBackgroundImg()} />
+      <div
+        className={`${backgroundClass} bg-cover bg-center bg-no-repeat h-[400px] md:h-full rounded-lg`}
+      />
       <div className="flex flex-col gap-8 md:py-4 lg:py-32 text-center md:text-start">
         <h2 className="text-darkgreyblue">Our commitment</h2>
         <p className="text-darkgreyblue/80">

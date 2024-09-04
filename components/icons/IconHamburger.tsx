@@ -4,7 +4,7 @@ function IconHamburger() {
       <path
         d="M14.5 12a1.5 1.5 0 010 3h-13a1.5 1.5 0 010-3h13zm0-6a1.5 1.5 0 010 3h-13a1.5 1.5 0 010-3h13zm0-6a1.5 1.5 0 010 3h-13a1.5 1.5 0 010-3h13z"
         fill="#333D4B"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       />
     </svg>
   );
