@@ -186,7 +186,8 @@ const SubscriptionQuestionnaire: React.FC<SubscriptionQuestionnaireProps> = ({
                     answerStyle(question_item.id, answer_item.id)?.contentColour
                   }
                 >
-                  {"2" in selectedAnswers && question_item.id === 4 ? (
+                  {"&#34;2&#34;" in selectedAnswers &&
+                  question_item.id === 4 ? (
                     <>
                       {questions[2]?.answers?.[selectedAnswers[2]]?.prices?.[
                         answer_item.id

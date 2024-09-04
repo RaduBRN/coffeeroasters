@@ -28,12 +28,12 @@ const PlanSummary: React.FC<PlanSummaryProps> = ({ selectedAnswers }) => {
     <div className="flex flex-col gap-5 rounded-lg bg-[url('/assets/plan/desktop/bg-order-summary.png')] bg-cover p-12 px-8 md:px-20 bg-[#2C343E]">
       <p className="uppercase text-white opacity-50">Order Summary</p>
       <h4 className="text-white leading-[40px] tracking-[1.1]">
-        "I drink my coffee {answer_1 === "Capsules" ? "using" : "as"}{" "}
+        &quot;I drink my coffee {answer_1 === "Capsules" ? "using" : "as"}{" "}
         <span className="text-darkcyan">{answer_1}</span>, with a{" "}
         <span className="text-darkcyan">{answer_2}</span> type of bean .{" "}
         <span className="text-darkcyan">{answer_3}</span>
         {answer_4}, sent to me <span className="text-darkcyan">{answer_5}</span>
-        ."
+        .&quot;
       </h4>
     </div>
   );
