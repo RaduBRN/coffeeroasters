@@ -2,22 +2,22 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useWindowSize } from "@/hooks/window-hooks";
 
 function Quality() {
-  const [screenWidth, setScreenWidth] = useState(0);
+  const { width: screenWidth } = useWindowSize();
+  const [backgroundClass, setBackgroundClass] = useState(
+    "/assets/about/mobile/image-quality.jpg"
+  );
 
-  const updateWindowSize = () => {
-    setScreenWidth(window.innerWidth);
-  };
+  useEffect(() => {
+    if (screenWidth >= 1024)
+      return setBackgroundClass("/assets/about/desktop/image-quality.jpg");
+    if (screenWidth >= 768)
+      return setBackgroundClass("/assets/about/tablet/image-quality.jpg");
 
-  useEffect(() => (window.onresize = updateWindowSize), []);
-
-  const returnBackgroundImg = () => {
-    if (screenWidth >= 1024) return `/assets/about/desktop/image-quality.jpg`;
-    if (screenWidth >= 768) return `/assets/about/tablet/image-quality.jpg`;
-
-    return `/assets/about/mobile/image-quality.jpg`;
-  };
+    return setBackgroundClass("/assets/about/mobile/image-quality.jpg");
+  }, [screenWidth]);
 
   return (
     <div className=" bg-[#2C343E] text-lightcream px-16 flex flex-col-reverse lg:grid grid-cols-2 items-center gap-14 md:gap-20 lg:gap-40 relative rounded-lg pb-20 mt-20">
@@ -36,7 +36,7 @@ function Quality() {
         <div className="relative h-[156px] md:h-[320px] lg:h-[475px] w-[279px] md:w-[573px] lg:w-[445px]">
           <Image
             className="object-cover rounded-lg"
-            src={returnBackgroundImg()}
+            src={backgroundClass}
             alt="Coffee quality"
             fill
           />

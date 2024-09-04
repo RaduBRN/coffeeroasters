@@ -1,28 +1,30 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useWindowSize } from "@/hooks/window-hooks";
 
 function Hero() {
-  const [screenWidth, setScreenWidth] = useState(0);
+  const { width: screenWidth } = useWindowSize();
+  const [backgroundClass, setBackgroundClass] = useState("");
 
-  const updateWindowSize = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  useEffect(() => (window.onresize = updateWindowSize), []);
-
-  const returnBackgroundImg = () => {
+  useEffect(() => {
     if (screenWidth >= 1024)
-      return `bg-[url('/assets/plan/desktop/image-hero-blackcup.jpg')]`;
+      return setBackgroundClass(
+        `bg-[url('/assets/plan/desktop/image-hero-blackcup.jpg')]`
+      );
     if (screenWidth >= 768)
-      return `bg-[url('/assets/plan/tablet/image-hero-blackcup.jpg')]`;
+      return setBackgroundClass(
+        `bg-[url('/assets/plan/tablet/image-hero-blackcup.jpg')]`
+      );
 
-    return `bg-[url('/assets/plan/mobile/image-hero-blackcup.jpg')]`;
-  };
+    return setBackgroundClass(
+      `bg-[url('/assets/plan/mobile/image-hero-blackcup.jpg')]`
+    );
+  }, [screenWidth]);
 
   return (
     <div
-      className={`${returnBackgroundImg()} bg-cover bg-no-repeat h-[400px] lg:min-h-[450px] flex flex-col justify-center rounded-lg`}
+      className={`${backgroundClass} bg-cover bg-no-repeat h-[400px] lg:min-h-[450px] flex flex-col justify-center rounded-lg`}
     >
       <div className="flex flex-col max-w-[398px] lg:max-w-[486px] gap-6 md:gap-10 mx-6 md:mx-16 text-center md:text-start">
         <h1 className="text-[#FEFCF7]">Create a plan</h1>

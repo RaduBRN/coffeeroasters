@@ -6,6 +6,7 @@ import IconClose from "./icons/IconClose";
 import Link from "next/link";
 import data from "@/public/data/pageLinkData";
 import { useState, useEffect } from "react";
+import { useWindowSize } from "@/hooks/window-hooks";
 
 const NavbarLinks = ({ toggleMenu }: { toggleMenu?: () => void }) => {
   return data.map((item) => (
@@ -33,13 +34,7 @@ const MobileMenu = ({ toggleMenu }: { toggleMenu: () => void }) => {
 function Navbar() {
   const logoColor = "#333D4B";
   const [showMenu, setShowMenu] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  const updateWindowSize = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  useEffect(() => (window.onresize = updateWindowSize), []);
+  const { width: screenWidth } = useWindowSize();
 
   const toggleMenu = () => {
     if (screenWidth <= 430) {
