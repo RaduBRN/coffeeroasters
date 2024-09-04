@@ -80,7 +80,7 @@ function CheckoutModal({
                       bean . <span className="text-darkcyan">{answer_3}</span>
                       {answer_4}, sent to me{" "}
                       <span className="text-darkcyan">{answer_5}</span>
-                      ."
+                      .&quot;
                     </h4>
                     <p className="text-darkgreyblue/80">
                       Is this correct? You can proceed to checkout or go back to
