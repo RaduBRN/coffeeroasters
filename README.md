@@ -16,12 +16,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io](https://your-solution-url.com)
+- Live Site URL: [netlify.com](https://your-live-site-url.com)
 
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
+- [Typescript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 - [Next.js](https://nextjs.org/) - React framework
 - [NextUI](https://nextui.org/) - React UI library
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework

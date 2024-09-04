@@ -73,7 +73,7 @@ function CheckoutModal({
                 ) : (
                   <>
                     <h4 className="leading-[40px] tracking-[1.1] text-grey">
-                      "I drink my coffee{" "}
+                      &quot;I drink my coffee{" "}
                       {answer_1 === "Capsules" ? "using" : "as"}{" "}
                       <span className="text-darkcyan">{answer_1}</span>, with a{" "}
                       <span className="text-darkcyan">{answer_2}</span> type of
