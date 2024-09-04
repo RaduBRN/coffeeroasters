@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io](https://your-solution-url.com)
-- Live Site URL: [netlify.com](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/responsive-coffee-subscription-site-with-nextjs-and-tailwindcss-3JbH5njAix)
+- Live Site URL: [netlify.com](https://jolly-manatee-e60289.netlify.app/)
 
 ### Built with
 
