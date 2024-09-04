@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[40px] md:text-[48px] lg:text-[72px] leading-[40px] md:leading-[48px] lg:leading-[72px] font-fraunces font-black;
+  }
+  h2 {
+    @apply text-[28px] md:text-[32px] lg:text-[40px] leading-[28px] md:leading-[48px] font-fraunces font-black;
+  }
+  h3 {
+    @apply text-[28px] md:text-[24px] lg:text-[32px] leading-[32px] lg:leading-[36px] font-fraunces font-black;
+  }
+  h4 {
+    @apply text-[24px] leading-[32px] font-black font-fraunces;
+  }
+  p {
+    @apply text-[15px] lg:text-[16px] leading-[25px] lg:leading-[26px] font-barlow font-normal;
+  }
+}
+
+@layer components {
+  .font-fraunces {
+    font-family: var(--font-fraunces);
+  }
+  .font-barlow {
+    font-family: var(--font-barlow);
+  }
+}
