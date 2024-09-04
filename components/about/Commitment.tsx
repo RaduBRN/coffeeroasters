@@ -20,6 +20,8 @@ function Commitment() {
     return `bg-[url('/assets/about/mobile/image-commitment.jpg')]`;
   };
 
+  console.log(screenWidth);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center justify-center gap-10 lg:gap-24 lg:px-20">
       <div
